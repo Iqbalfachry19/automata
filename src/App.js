@@ -120,6 +120,9 @@ function App() {
 
   return (
     <div className="max-w-2xl mx-auto h-[90%] my-10 align-middle rounded-lg bg-indigo-300">
+      <h1 className="flex text-4xl pt-10 font-bold text-blue-600 justify-center">
+        Automata App
+      </h1>
       <div className="flex p-10 justify-between">
         <div className="flex space-y-1  flex-col">
           <div className="flex   space-x-2">
