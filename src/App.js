@@ -123,7 +123,7 @@ function App() {
       <h1 className="flex text-4xl pt-10 font-bold text-blue-600 justify-center">
         Automata App
       </h1>
-      <div className="flex p-10 justify-between">
+      <div className="flex space-y-10 lg:space-y-0 flex-col lg:flex-row p-10 justify-between">
         <div className="flex space-y-1  flex-col">
           <div className="flex   space-x-2">
             <label className="flex" htmlFor="nama">
@@ -132,7 +132,7 @@ function App() {
             <input
               type="text"
               placeholder=""
-              className="focus:outline-none py-1 rounded-lg text-center"
+              className="focus:outline-none flex-1 py-1 rounded-lg text-center"
               id="nama"
               onChange={(e) => setNama(e.target.value)}
             />
@@ -143,7 +143,7 @@ function App() {
             </label>
             <input
               type="text"
-              className="focus:outline-none py-1 rounded-lg text-center"
+              className="focus:outline-none flex-1 py-1 rounded-lg text-center"
               placeholder=""
               onChange={(e) => setNim(e.target.value)}
               id="nim"
@@ -157,7 +157,7 @@ function App() {
           </label>
           <input
             type="text"
-            className="focus:outline-none py-1 rounded-lg text-center"
+            className="focus:outline-none flex-1 py-1 rounded-lg text-center"
             value={search}
             readOnly
             id="search"
