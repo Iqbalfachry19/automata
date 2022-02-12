@@ -119,58 +119,61 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="flex flex-col">
-        <div className="flex flex-col ">
-          <label className="" htmlFor="nama">
-            Nama:
+    <div className="max-w-2xl mx-auto h-[90%] my-10 align-middle rounded-lg bg-indigo-300">
+      <div className="flex p-10 justify-between">
+        <div className="flex space-y-1  flex-col">
+          <div className="flex   space-x-2">
+            <label className="flex" htmlFor="nama">
+              Nama:
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              className="focus:outline-none py-1 rounded-lg text-center"
+              id="nama"
+              onChange={(e) => setNama(e.target.value)}
+            />
+          </div>
+          <div className="flex space-x-5">
+            <label className="flex" htmlFor="nim">
+              Nim:
+            </label>
+            <input
+              type="text"
+              className="focus:outline-none py-1 rounded-lg text-center"
+              placeholder=""
+              onChange={(e) => setNim(e.target.value)}
+              id="nim"
+            />
+          </div>
+        </div>
+
+        <div className="flex space-x-2">
+          <label className="flex items-center " htmlFor="search">
+            Search:
           </label>
           <input
             type="text"
-            placeholder=""
-            className="border-2 text-center"
-            id="nama"
-            onChange={(e) => setNama(e.target.value)}
-          />
-        </div>
-        <div className="flex flex-col  ">
-          <label className="" htmlFor="nim">
-            Nim:
-          </label>
-          <input
-            type="text"
-            className="border-2 text-center"
-            placeholder=""
-            onChange={(e) => setNim(e.target.value)}
-            id="nim"
+            className="focus:outline-none py-1 rounded-lg text-center"
+            value={search}
+            readOnly
+            id="search"
           />
         </div>
       </div>
-      <div className="flex flex-col ">
-        <label className="" htmlFor="search">
-          Search:
-        </label>
-        <input
-          type="text"
-          className="border-2 text-center"
-          value={search}
-          readOnly
-          id="search"
-        />
-      </div>
-      <div className="flex flex-col">
+      <div className="flex p-10 flex-col my-10">
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="rounded-lg bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4"
           onClick={run}
           type="submit"
         >
           Run
         </button>
       </div>
-      <div className="flex flex-col">
+      <div className="flex p-10 space-y-1 flex-col">
         <input
           type="text"
-          className="border-2"
+          className="focus:outline-none py-1 rounded-lg text-center"
           placeholder=""
           value={hasilNama}
           readOnly
@@ -178,7 +181,7 @@ function App() {
         />
         <input
           type="text"
-          className="border-2"
+          className="focus:outline-none py-1 rounded-lg text-center"
           placeholder=""
           value={hasilNim}
           readOnly
